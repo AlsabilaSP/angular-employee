@@ -1,0 +1,45 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-title {
+    padding: 1rem 1rem 2rem;
+    font-weight: bold;
+    color: var(--mandiri-blue);
+}
+  
+.login-card {
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+  
+.full-width {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: var(--mandiri-grey);
+}  
+
+.login-button {
+    width: 100%;
+    background-color: var(--mandiri-blue) !important;
+    color: white !important;
+
+    &:hover {
+        background-color: var(--mandiri-skyblue) !important;
+    }
+
+    &:disabled {
+        background-color: var(--mandiri-grey) !important;
+    }
+}
+
+.login-error {
+    font-size: 14px;
+    color: red;
+    padding-top: .5rem;
+}
