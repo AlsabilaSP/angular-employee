@@ -98,3 +98,35 @@ export const employeeMockData = [{"id":1,"username":"sburless0","firstName":"She
     {"id":98,"username":"btroy2p","firstName":"Brigitte","lastName":"Troy","email":"btroy2p@ucsd.edu","birthDate":"2016-02-05 07:40:05","basicSalary":7451221,"status":"Payment Adjustment Coordinator","group":"Gigashots","description":"2022-11-21 05:08:05"},
     {"id":99,"username":"gsleightholme2q","firstName":"Glory","lastName":"Sleightholme","email":"gsleightholme2q@mail.ru","birthDate":"1990-04-09 11:55:36","basicSalary":7254207,"status":"Marketing Assistant","group":"Meevee","description":"2023-05-16 19:13:04"},
     {"id":100,"username":"rhadaway2r","firstName":"Reggis","lastName":"Hadaway","email":"rhadaway2r@webs.com","birthDate":"2007-02-05 01:55:29","basicSalary":2122863,"status":"Legal Assistant","group":"Ainyx","description":"2024-09-25 03:25:11"}]
+
+export const groupMockData = [{
+    "name": "Topdrive",
+    "code": "Tagfeed"
+  }, {
+    "name": "Realcube",
+    "code": "Bluezoom"
+  }, {
+    "name": "Twiyo",
+    "code": "Einti"
+  }, {
+    "name": "Tambee",
+    "code": "Yakitri"
+  }, {
+    "name": "Yamia",
+    "code": "Divape"
+  }, {
+    "name": "Fatz",
+    "code": "Rooxo"
+  }, {
+    "name": "Jaxnation",
+    "code": "Gevee"
+  }, {
+    "name": "Bubblebox",
+    "code": "Youopia"
+  }, {
+    "name": "Jayo",
+    "code": "Rhyloo"
+  }, {
+    "name": "Zazio",
+    "code": "Linkbridge"
+  }]

@@ -17,8 +17,7 @@ export class DetailComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private employeeSvc: EmployeeService,
-    private confirmationService: ConfirmationService, 
-    private messageService: MessageService
+    private confirmationService: ConfirmationService,
   ) { 
     this.route.params.subscribe((param) => {
       this.selectedEmployee = this.employeeSvc.getEmployeeById(param['id']);

@@ -18,6 +18,10 @@ export class EmployeeService {
     return newData;
   }
 
+  getEmployeeLength() {
+    return this.employees.value.length;
+  }
+
   addEmployee(employee: Employee) {
     const updatedEmployees = [...this.employees.value, employee];
     this.employees.next(updatedEmployees);

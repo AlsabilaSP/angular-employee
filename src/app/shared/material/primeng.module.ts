@@ -10,6 +10,10 @@ import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { CardModule } from 'primeng/card';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { DatePickerModule } from 'primeng/datepicker';
 
 @NgModule({
   imports: [
@@ -23,7 +27,11 @@ import { CardModule } from 'primeng/card';
     ToastModule,
     CardModule,
     ConfirmPopupModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    InputNumberModule,
+    InputGroupAddonModule,
+    InputGroupModule,
+    DatePickerModule
   ],
   exports: [
     ToolbarModule,
@@ -36,7 +44,11 @@ import { CardModule } from 'primeng/card';
     ToastModule,
     ConfirmPopupModule,
     ConfirmDialogModule,
-    CardModule
+    CardModule,
+    InputNumberModule,
+    InputGroupAddonModule,
+    InputGroupModule,
+    DatePickerModule
   ]
 })
 export class PrimengModule { }

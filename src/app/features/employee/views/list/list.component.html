@@ -1,6 +1,4 @@
 <h2 class="header-title">Employee List</h2>
-<p-toast />
-<p-confirmdialog />
 <p-table 
     #dt2
     *ngIf="(employees$ | async) as employees" 
@@ -30,7 +28,7 @@
                     placeholder="Search Employee"
                 />
             </p-iconfield>
-            <p-button label="Add Employee" severity="info" />
+            <p-button label="Add Employee" severity="info" (click)="navigateToAdd()" />
         </div>
     </ng-template>
     <ng-template #header>

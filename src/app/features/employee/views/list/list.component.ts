@@ -76,8 +76,13 @@ export class ListComponent implements OnInit {
   }
 
   navigateToDetail(emp: Employee) {
-    this.router.navigate(['/employee-list/' + emp.id]);
+    this.router.navigate(['/employee-list/detail/' + emp.id]);
   }
+
+  navigateToAdd() {
+    this.router.navigate(['/employee-list/add']);
+  }
+
 
   confirmDelete(event: Event, emp: Employee) {
     event.stopPropagation();
@@ -95,13 +100,13 @@ export class ListComponent implements OnInit {
             severity: 'danger'
         },
         accept: () => {
+            this.employeeSvc.deleteEmployee(emp.id);
             this.messageService.add({ 
               severity: 'error', 
               summary: 'Deleted', 
               detail: `You have deleted ${emp.username}`, 
               life: 3000 
             });
-            this.employeeSvc.deleteEmployee(emp.id);
         },
     });
 }
