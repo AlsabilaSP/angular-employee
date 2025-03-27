@@ -10,4 +10,13 @@
     --mandiri-skyblue: #67B2E8;
     --mandiri-orange: #EA7200;
     --mandiri-grey: #B6B8BA;
+
+    --p-highlight-focus-color: var(--mandiri-skyblue) !important;
+    --p-highlight-color: var(--mandiri-skyblue) !important;
+    --p-highlight-focus-background: color-mix(in srgb,var(var(--mandiri-skyblue)),transparent 76%) !important;
+    --p-highlight-background: color-mix(in srgb,var(--mandiri-skyblue),transparent 88%) !important;
+}
+
+.header-title {
+    color: var(--mandiri-blue);
 }

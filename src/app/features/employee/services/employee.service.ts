@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Employee } from '../models/employee.model';
+import { employeeMockData } from '../models/employee.mock';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeeService {
@@ -8,18 +9,12 @@ export class EmployeeService {
   employees$ = this.employees.asObservable();
 
   private generateMockEmployees(): Employee[] {
-    return Array.from({ length: 100 }, (_, i) => ({
-      id: i + 1,
-      username: `emp${i + 1}`,
-      firstName: `Employee`,
-      lastName: `${i + 1}`,
-      email: `employee${i + 1}@company.com`,
-      birthDate: new Date('07-03-1998'),
-      basicSalary: 5000000,
-      status: '',
-      group: '',
-      description: new Date('30-10-2020')
+    const newData: Employee[] = employeeMockData.map(item => ({
+      ...item,
+      birthDate: new Date(item.birthDate),
+      description: new Date(item.description)
     }));
+    return newData;
   }
 
   addEmployee(employee: Employee) {
