@@ -12,6 +12,9 @@
     stripedRows
     [scrollable]="true" scrollHeight="500px"
     [globalFilterFields]="['username', 'firstName', 'lastName', 'email']"
+    selectionMode="single"
+    [(selection)]="selectedEmployee" dataKey="id"
+    (onRowSelect)="onClickRow()"
 >
     <ng-template #caption>
         <div style="display: flex; justify-content: space-between; width: 100%;" >
@@ -23,7 +26,7 @@
                     pInputText
                     type="text"
                     [(ngModel)]="searchInput"
-                    (input)="dt2.filterGlobal(searchInput, 'contains')"
+                    (input)="onSearchInputChange()"
                     placeholder="Search Employee"
                 />
             </p-iconfield>
@@ -47,13 +50,13 @@
         </tr>
     </ng-template>
     <ng-template #body let-employee let-rowIndex="rowIndex">
-        <tr>
+        <tr [pSelectableRow]="employee">
             <td>{{ rowIndex + 1 }}</td>
             <td>{{ employee.username }}</td>
             <td>{{ employee.firstName }} {{ employee.lastName }}</td>
             <td>{{ employee.email }}</td>
             <td>{{ employee.birthDate | date }}</td>
-            <td>{{ employee.basicSalary | currency: 'Rp' : 'symbol' : '1.0-0' }}</td>
+            <td>{{ employee.basicSalary | currency: 'Rp ' : 'symbol' : '1.0-0' }}</td>
             <td>{{ employee.group }}</td>
             <td>
                 <div style="display: flex; gap: 1rem;">

@@ -3,3 +3,9 @@
     --p-toolbar-border-color: var(--mandiri-yellow);
     --p-toolbar-border-radius: 0px;
 }
+
+.sticky-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, identity } from 'rxjs';
 import { Employee } from '../models/employee.model';
 import { employeeMockData } from '../models/employee.mock';
 
@@ -11,6 +11,7 @@ export class EmployeeService {
   private generateMockEmployees(): Employee[] {
     const newData: Employee[] = employeeMockData.map(item => ({
       ...item,
+      id: item.id.toString(),
       birthDate: new Date(item.birthDate),
       description: new Date(item.description)
     }));
@@ -22,7 +23,7 @@ export class EmployeeService {
     this.employees.next(updatedEmployees);
   }
 
-  deleteEmployee(id: number) {
+  deleteEmployee(id: string) {
     const updatedEmployees = this.employees.value.filter(emp => emp.id !== id);
     this.employees.next(updatedEmployees);
   }
@@ -34,7 +35,7 @@ export class EmployeeService {
     this.employees.next(updatedEmployees);
   }
 
-  getEmployeeById(id: number): Employee | undefined {
+  getEmployeeById(id: string): Employee | undefined {
     return this.employees.value.find(emp => emp.id === id);
   }
 }

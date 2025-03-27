@@ -1,4 +1,4 @@
-<p-toolbar>
+<p-toolbar class="sticky-toolbar">
     <ng-template #start>
         <img src="assets/images/bank-mandiri.svg" width="100"/>
     </ng-template>
@@ -7,6 +7,6 @@
         (click)="onLogout()">Logout</p-button>
     </ng-template>
 </p-toolbar>
-<div style="padding-inline: 24px;">
+<div class="p-4">
     <router-outlet />
 </div>

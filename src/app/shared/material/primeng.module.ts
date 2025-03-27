@@ -9,6 +9,7 @@ import { IconFieldModule } from "primeng/iconfield";
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     InputIconModule,
     SelectModule,
     ToastModule,
+    CardModule,
     ConfirmPopupModule,
     ConfirmDialogModule
   ],
@@ -33,7 +35,8 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     SelectModule,
     ToastModule,
     ConfirmPopupModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    CardModule
   ]
 })
 export class PrimengModule { }

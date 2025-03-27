@@ -1,0 +1,75 @@
+<h2 class="header-title">Detail Employee</h2>
+<p-card>
+    <div class="row">
+        <div class="col-lg-6 col-12 gap-4">
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Username
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.username }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Full Name
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.firstName }} {{ selectedEmployee?.lastName }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Email
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.email }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Birth Date
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.birthDate | date }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Basic Salary
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.basicSalary | currency: 'Rp ' : 'symbol' : '1.0-0' }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Status
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.status }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Group
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.group }}
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6 fw-bold">
+                    Description
+                </div>
+                <div class="col-6">
+                    {{ selectedEmployee?.description | date }}
+                </div>
+            </div>
+            <div class="d-flex py-2 gap-3">
+                <p-button label="Back" (click)="navigateToList()" severity="secondary" />
+                <p-button label="Edit" severity="warn" />
+            </div>
+        </div>
+    </div>
+</p-card>
