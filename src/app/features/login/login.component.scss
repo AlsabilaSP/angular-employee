@@ -8,7 +8,7 @@
 .login-title {
     padding: 1rem 1rem 2rem;
     font-weight: bold;
-    color: var(--mandiri-blue);
+    color: var(--default-blue);
 }
   
 .login-card {
@@ -21,20 +21,20 @@
 .full-width {
     width: 100%;
     margin-bottom: 1.5rem;
-    color: var(--mandiri-grey);
+    color: var(--default-grey);
 }  
 
 .login-button {
     width: 100%;
-    background-color: var(--mandiri-blue) !important;
+    background-color: var(--default-blue) !important;
     color: white !important;
 
     &:hover {
-        background-color: var(--mandiri-skyblue) !important;
+        background-color: var(--default-skyblue) !important;
     }
 
     &:disabled {
-        background-color: var(--mandiri-grey) !important;
+        background-color: var(--default-grey) !important;
     }
 }
 

@@ -40,9 +40,9 @@ export class LoginComponent {
   }
 
   onLogin() {
-    // hardcoded username and password: both alsamandiri
+    // hardcoded username and password: both alsafrontend
     const { username, password } = this.loginFg.value;
-    this.loginFg.get('success')?.setValue(username === "alsamandiri" && password === "alsamandiri");
+    this.loginFg.get('success')?.setValue(username === "alsafrontend" && password === "alsafrontend");
 
     const { success } = this.loginFg.value;
     if (success) {

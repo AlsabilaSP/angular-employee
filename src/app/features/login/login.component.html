@@ -1,7 +1,7 @@
-<div class="login-container" style="background-image: url('assets/images/mandiri-background.jpg'); background-size: cover;">
+<div class="login-container" style="background-image: url('assets/images/default-background.jpg'); background-size: cover;">
     <mat-card class="login-card">
       <mat-card-title class="login-title">
-        <img src="assets/images/bank-mandiri.svg" width="100"/>
+        <img src="assets/images/bank-default.svg" width="100"/>
         Login
       </mat-card-title>
       <mat-card-content>
@@ -10,7 +10,7 @@
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Username</mat-label>
             <input matInput type="text" formControlName="username" [errorStateMatcher]="matcher"
-            placeholder="Ex: alsamandiri">
+            placeholder="Ex: alsafrontend">
             @if (loginFg.get('username')?.hasError('required')) {
                 <mat-error>Username is <strong>required</strong></mat-error>
             }

@@ -5,18 +5,18 @@
     --mat-sys-on-surface-variant: #B6B8BA;
     --mat-sys-on-surface: #003D79;
 
-    --mandiri-blue: #003D79;
-    --mandiri-yellow: #FFB700;
-    --mandiri-skyblue: #67B2E8;
-    --mandiri-orange: #EA7200;
-    --mandiri-grey: #B6B8BA;
+    --default-blue: #003D79;
+    --default-yellow: #FFB700;
+    --default-skyblue: #67B2E8;
+    --default-orange: #EA7200;
+    --default-grey: #B6B8BA;
 
-    --p-highlight-focus-color: var(--mandiri-skyblue) !important;
-    --p-highlight-color: var(--mandiri-skyblue) !important;
-    --p-highlight-focus-background: color-mix(in srgb,var(var(--mandiri-skyblue)),transparent 76%) !important;
-    --p-highlight-background: color-mix(in srgb,var(--mandiri-skyblue),transparent 88%) !important;
+    --p-highlight-focus-color: var(--default-skyblue) !important;
+    --p-highlight-color: var(--default-skyblue) !important;
+    --p-highlight-focus-background: color-mix(in srgb,var(var(--default-skyblue)),transparent 76%) !important;
+    --p-highlight-background: color-mix(in srgb,var(--default-skyblue),transparent 88%) !important;
 }
 
 .header-title {
-    color: var(--mandiri-blue);
+    color: var(--default-blue);
 }
