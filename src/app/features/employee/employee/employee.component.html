@@ -1,0 +1,10 @@
+<p-toolbar>
+    <ng-template #start>
+        <img src="assets/images/bank-mandiri.svg" width="100"/>
+    </ng-template>
+    <ng-template #end>
+        <p-button severity="danger" raised [style]="{ 'color': 'white' }"
+        (click)="onLogout()">Logout</p-button>
+    </ng-template>
+</p-toolbar>
+<router-outlet />
