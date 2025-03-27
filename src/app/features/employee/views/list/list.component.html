@@ -1,0 +1,30 @@
+<p-table 
+    *ngIf="(employees$ | async) as employees" 
+    [value]="employees" 
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [paginator]="true"
+    [rows]="5"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    stripedRows
+>
+    <ng-template #header>
+        <tr>
+            <th>No</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthdate</th>
+            <th>Basic Salary</th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-employee let-rowIndex="rowIndex">
+        <tr>
+            <td>{{ rowIndex + 1 }}</td>
+            <td>{{ employee.username }}</td>
+            <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.birthDate | date }}</td>
+            <td>{{ employee.basicSalary | currency }}</td>
+        </tr>
+    </ng-template>
+</p-table>

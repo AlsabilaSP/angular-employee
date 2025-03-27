@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { RouterModule } from '@angular/router';
-import { EmployeeComponent } from './employee/employee.component';
-import { ListComponent } from './list/list.component';
+import { EmployeeComponent } from './views/employee/employee.component';
+import { ListComponent } from './views/list/list.component';
 import { PrimengModule } from '../../shared/material/primeng.module';
 
 
