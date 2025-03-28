@@ -34,4 +34,10 @@ export class DetailComponent implements OnInit {
     this.router.navigate(['/employee-list']);
   }
 
+  navigateToEdit() {
+    if (this.selectedEmployee) {
+      this.router.navigate(['/employee-list/edit/' + this.selectedEmployee.id]);
+    }
+  }
+
 }

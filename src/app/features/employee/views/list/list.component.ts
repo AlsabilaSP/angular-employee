@@ -66,17 +66,21 @@ export class ListComponent implements OnInit {
             severity: 'warn'
         },
         accept: () => {
-          this.navigateToDetail(emp);
+          this.navigateToEdit(emp);
         },
     });
   }
 
   onClickRow() {
-    this.navigateToDetail(this.selectedEmployee)
+    this.navigateToDetail(this.selectedEmployee);
   }
 
   navigateToDetail(emp: Employee) {
     this.router.navigate(['/employee-list/detail/' + emp.id]);
+  }
+
+  navigateToEdit(emp: Employee) {
+    this.router.navigate(['/employee-list/edit/' + emp.id]);
   }
 
   navigateToAdd() {

@@ -1,0 +1,135 @@
+<h2 class="header-title">Edit Employee</h2>
+<p-card>
+    <form [formGroup]="employeeFg">
+        <div class="row">
+            <div class="col-lg-6 col-12 gap-4">
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Username
+                        <small *ngIf="
+                            employeeFg.get('username')?.invalid &&
+                            employeeFg.get('username')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Username is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" pInputText formControlName="username" placeholder="Username" />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        First Name
+                        <small *ngIf="
+                            employeeFg.get('fistName')?.invalid &&
+                            employeeFg.get('fistName')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        First Name is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" pInputText formControlName="firstName" placeholder="First Name" />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Last Name
+                        <small *ngIf="
+                            employeeFg.get('lastName')?.invalid &&
+                            employeeFg.get('lastName')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Last Name is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" pInputText formControlName="lastName" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Email
+                        <small *ngIf="
+                            employeeFg.get('email')?.invalid &&
+                            employeeFg.get('email')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Email is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="email" pInputText formControlName="email" placeholder="Email"/>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Birth Date
+                        <small *ngIf="
+                            employeeFg.get('birthDate')?.invalid &&
+                            employeeFg.get('birthDate')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Birth Date is required</small>
+                    </div>
+                    <div class="col-6">
+                        <p-datepicker formControlName="birthDate" placeholder="Birth Date" [maxDate]="currentDate"
+                        showIcon />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Basic Salary
+                        <small *ngIf="
+                            employeeFg.get('basicSalary')?.invalid &&
+                            employeeFg.get('basicSalary')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Basic Salary is required</small>
+                    </div>
+                    <div class="col-6">
+                        <p-inputgroup>
+                            <p-inputgroup-addon>Rp</p-inputgroup-addon>
+                            <p-inputnumber formControlName="basicSalary" placeholder="Basic Salary" />
+                            <p-inputgroup-addon>.00</p-inputgroup-addon>
+                        </p-inputgroup>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Status
+                        <small *ngIf="
+                            employeeFg.get('status')?.invalid &&
+                            employeeFg.get('status')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Status is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" pInputText formControlName="status" placeholder="Job Status" />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Group
+                        <small *ngIf="
+                            employeeFg.get('group')?.invalid &&
+                            employeeFg.get('group')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Group is required</small>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" pInputText formControlName="group" placeholder="Group" />
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 fw-bold d-flex flex-column">
+                        Description
+                        <small *ngIf="
+                            employeeFg.get('description')?.invalid &&
+                            employeeFg.get('description')?.dirty
+                        " style="color: red; font-size: 12px; font-style: italic;">
+                        Description is required</small>
+                    </div>
+                    <div class="col-6">
+                        <p-datepicker formControlName="description" placeholder="Job Started at" showIcon />
+                    </div>
+                </div>
+                <div class="d-flex py-2 gap-3">
+                    <p-button label="Back" (click)="navigateToList()" severity="secondary" />
+                    <p-button label="Save" (click)="onSave()" severity="info" [disabled]="employeeFg.invalid" />
+                </div>
+            </div>
+        </div>
+    </form>
+</p-card>

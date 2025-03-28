@@ -23,7 +23,7 @@ export class EmployeeService {
   }
 
   addEmployee(employee: Employee) {
-    const updatedEmployees = [...this.employees.value, employee];
+    const updatedEmployees = [employee, ...this.employees.value];
     this.employees.next(updatedEmployees);
   }
 

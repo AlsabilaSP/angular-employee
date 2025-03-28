@@ -11,6 +11,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { DetailComponent } from './views/detail/detail.component';
 import { MaterialModule } from '../../shared/material/material.module';
 import { AddComponent } from './views/add/add.component';
+import { EditComponent } from './views/edit/edit.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AddComponent } from './views/add/add.component';
     EmployeeComponent,
     ListComponent,
     DetailComponent,
-    AddComponent
+    AddComponent,
+    EditComponent
   ],
   imports: [
     RouterModule,

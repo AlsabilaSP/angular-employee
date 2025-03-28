@@ -4,6 +4,7 @@ import { ListComponent } from './views/list/list.component';
 import { EmployeeComponent } from './views/employee/employee.component';
 import { DetailComponent } from './views/detail/detail.component';
 import { AddComponent } from './views/add/add.component';
+import { EditComponent } from './views/edit/edit.component';
 
 const routes: Routes = [
   { 
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'add',
         component: AddComponent
+      },
+      {
+        path: 'edit/:id',
+        component: EditComponent
       }
     ] 
   }
