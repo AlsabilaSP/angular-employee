@@ -2,7 +2,20 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
+Hardcoded Login credentials:
+
+```bash
+username: alsafrontend
+password: alsafrontend
+```
+
 ## Development server
+
+Before starting the local development server, make sure all dependencies are installed, run:
+
+```bash
+npm install
+```
 
 To start a local development server, run:
 

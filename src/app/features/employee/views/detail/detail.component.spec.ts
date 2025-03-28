@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DetailComponent } from './detail.component';
+import { EmployeeModule } from '../../employee.module';
+import { ActivatedRoute, provideRouter } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
@@ -8,7 +10,17 @@ describe('DetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DetailComponent]
+      imports: [EmployeeModule],
+      providers: [
+        provideRouter([]),
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: { paramMap: { get: () => '123' } }, // Mock param
+            params: of({ id: '123' }), // Mock observable params
+          },
+        },
+      ],
     })
     .compileComponents();
 

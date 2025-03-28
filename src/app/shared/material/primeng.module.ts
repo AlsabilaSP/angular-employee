@@ -14,6 +14,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { DatePickerModule } from 'primeng/datepicker';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { DatePickerModule } from 'primeng/datepicker';
     InputNumberModule,
     InputGroupAddonModule,
     InputGroupModule,
-    DatePickerModule
+    DatePickerModule,
+    TooltipModule
   ],
   exports: [
     ToolbarModule,
@@ -48,7 +50,8 @@ import { DatePickerModule } from 'primeng/datepicker';
     InputNumberModule,
     InputGroupAddonModule,
     InputGroupModule,
-    DatePickerModule
+    DatePickerModule,
+    TooltipModule
   ]
 })
 export class PrimengModule { }
